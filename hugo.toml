@@ -38,6 +38,8 @@ style = "monokai"
   # customSCSS = ["scss/custom.scss"]
   # customJS = ["js/custom.js"]
 
+  katex = true
+
 [taxonomies]
   category = "categories"
   series = "series"
