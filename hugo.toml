@@ -65,3 +65,7 @@ url = "https://www.linkedin.com/in/apil-chaudhary/"
   name = "About"
   weight = 2
   url = "about/"
+
+[caches]
+  [caches.images]
+    dir = ":cacheDir/images"
