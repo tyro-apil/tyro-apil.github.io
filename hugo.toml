@@ -64,8 +64,12 @@ url = "https://www.linkedin.com/in/apil-chaudhary/"
   weight = 1
   url  = "posts/"
 [[menu.main]]
-  name = "About"
+  name = "Tutorials"
   weight = 2
+  url = "tutorials/"
+[[menu.main]]
+  name = "About"
+  weight = 6
   url = "about/"
 
 [caches]
