@@ -60,9 +60,9 @@ url = "https://www.linkedin.com/in/apil-chaudhary/"
 
 # Menu links
 [[menu.main]]
-  name = "Blog"
+  name = "Notes"
   weight = 1
-  url  = "posts/"
+  url  = "notes/"
 [[menu.main]]
   name = "Tutorials"
   weight = 2
