@@ -1,0 +1,14 @@
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" | default "" }}
+{{ $height := .Get "height" }}
+{{ $width := .Get "width" }}
+{{ $caption := .Get "caption" }}
+
+<figure class="image-wrapper">
+    <img src="{{ $src }}" alt="{{ $alt }}" {{ with $width }} width="{{ . }}" {{ end }} {{ with $height }}
+        height="{{ . }}" {{ end }}>
+
+    {{ with $caption }}
+    <figcaption>{{ . }}</figcaption>
+    {{ end }}
+</figure>
