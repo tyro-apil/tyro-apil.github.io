@@ -8,10 +8,6 @@ defaultcontentlanguage = "en"
 [pagination]
 pagerSize = 20
 
-[services]
-[services.disqus]
-shortname = "apil"
-
 [markup.highlight]
 style = "monokai"
 
@@ -34,7 +30,7 @@ style = "monokai"
   colorScheme = "auto"
   hidecolorschemetoggle = false
 
-  # customCSS = ["css/custom.css"]
+  customCSS = ["css/custom.css"]
   # customSCSS = ["scss/custom.scss"]
   # customJS = ["js/custom.js"]
 
@@ -60,9 +56,9 @@ url = "https://www.linkedin.com/in/apil-chaudhary/"
 
 # Menu links
 [[menu.main]]
-  name = "Notes"
+  name = "Blog"
   weight = 1
-  url  = "notes/"
+  url  = "posts/"
 [[menu.main]]
   name = "Tutorials"
   weight = 2
