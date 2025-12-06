@@ -1,0 +1,59 @@
+/* /assets/css/custom.css (Updated) */
+
+/* 1. Color Inversion (from your previous setup) */
+body.colorscheme-dark .dark_mode_illustration {
+    filter: invert(100%) hue-rotate(180deg);
+    transition: filter 0.3s ease;
+}
+
+/* 2. Image Wrapper (Figure) Styles */
+.dark_mode_illustration_wrapper {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 3. Caption (Figcaption) Styles */
+.dark_mode_illustration_wrapper figcaption {
+    text-align: center;
+    font-style: italic;
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: var(--secondary-text-color);
+}
+
+/* 4. Image Styling */
+.dark_mode_illustration_wrapper img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ===== REGULAR IMAGES (NO INVERSION) ===== */
+/* 5. Regular Image Wrapper */
+.image-wrapper {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 6. Regular Caption */
+.image-wrapper figcaption {
+    text-align: center;
+    font-style: italic;
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: var(--secondary-text-color);
+}
+
+/* 7. Regular Image */
+.image-wrapper img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
