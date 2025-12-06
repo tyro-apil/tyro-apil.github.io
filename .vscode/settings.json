@@ -1,0 +1,52 @@
+{
+    "frontMatter.taxonomy.contentTypes": [
+        {
+            "name": "default",
+            "pageBundle": false,
+            "fields": [
+                {
+                    "title": "authors",
+                    "name": "authors",
+                    "type": "choice",
+                    "choices": [
+                        "Apil Chaudhary"
+                    ]
+                },
+                {
+                    "title": "title",
+                    "name": "title",
+                    "type": "string"
+                },
+                {
+                    "title": "date",
+                    "name": "date",
+                    "type": "datetime"
+                },
+                {
+                    "title": "description",
+                    "name": "description",
+                    "type": "string"
+                },
+                {
+                    "title": "tags",
+                    "name": "tags",
+                    "type": "tags"
+                },
+                {
+                    "title": "categories",
+                    "name": "categories",
+                    "type": "categories"
+                },
+                {
+                    "title": "series",
+                    "name": "series",
+                    "type": "choice",
+                    "choices": [
+                        "Computer Architecture and Organization"
+                    ]
+                }
+            ]
+        }
+    ],
+    "[markdown]": {}
+}

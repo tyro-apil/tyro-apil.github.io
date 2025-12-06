@@ -1,0 +1,17 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.framework.id": "hugo",
+  "frontMatter.content.publicFolder": "static",
+  "frontMatter.preview.host": "http://localhost:1313",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "posts",
+      "path": "[[workspace]]/content/posts"
+    },
+    {
+      "title": "tutorials",
+      "path": "[[workspace]]/content/tutorials"
+    }
+  ],
+  "frontMatter.git.enabled": true
+}
