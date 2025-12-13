@@ -11,6 +11,10 @@
     {
       "title": "tutorials",
       "path": "[[workspace]]/content/tutorials"
+    },
+    {
+      "title": "notes",
+      "path": "[[workspace]]/content/notes"
     }
   ],
   "frontMatter.git.enabled": true

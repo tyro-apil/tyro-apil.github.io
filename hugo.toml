@@ -16,7 +16,7 @@ style = "monokai"
   info = "Robotics & AI | Cloud Computing"
   description = "Apil Chaudhary's personal website"
   keywords = "blog,developer,personal"
-  # avatarurl = "images/avatar.webp"
+  avatarurl = "images/avatar.webp"
   #gravatar = "apil.chaudhary1@gmail.com"
 
   # faviconSVG = "/img/favicon.svg"
@@ -60,9 +60,13 @@ url = "https://www.linkedin.com/in/apil-chaudhary/"
   weight = 1
   url  = "posts/"
 [[menu.main]]
-  name = "Tutorials"
+  name = "Tutorial"
   weight = 2
   url = "tutorials/"
+[[menu.main]]
+  name = "Note"
+  weight = 3
+  url = "notes/"
 [[menu.main]]
   name = "About"
   weight = 6
