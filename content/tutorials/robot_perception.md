@@ -1,6 +1,6 @@
 +++
 authors = ["Apil Chaudhary"]
-date = "2025-10-24"
+date = "2026-01-23"
 title = "Robot Perception Tutorial Series"
 slug = "robot-perception-tutorial-series"
 tags = [
