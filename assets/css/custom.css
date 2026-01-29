@@ -1,46 +1,16 @@
-/* /assets/css/custom.css (Updated) */
-
-/* 1. Color Inversion (from your previous setup) */
+/* ===== IMAGE STYLES ===== */
 body.colorscheme-dark .dark_mode_illustration {
     filter: invert(100%) hue-rotate(180deg);
     transition: filter 0.3s ease;
 }
 
-/* 2. Image Wrapper (Figure) Styles */
-.dark_mode_illustration_wrapper {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* 3. Caption (Figcaption) Styles */
-.dark_mode_illustration_wrapper figcaption {
-    text-align: center;
-    font-style: italic;
-    margin-top: 5px;
-    font-size: 0.9em;
-    color: var(--secondary-text-color);
-}
-
-/* 4. Image Styling */
-.dark_mode_illustration_wrapper img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-    height: auto;
-}
-
-
-/* ===== REGULAR IMAGES (NO INVERSION) ===== */
-/* 5. Regular Image Wrapper */
+.dark_mode_illustration_wrapper,
 .image-wrapper {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
-/* 6. Regular Caption */
+.dark_mode_illustration_wrapper figcaption,
 .image-wrapper figcaption {
     text-align: center;
     font-style: italic;
@@ -49,28 +19,25 @@ body.colorscheme-dark .dark_mode_illustration {
     color: var(--secondary-text-color);
 }
 
-/* 7. Regular Image */
+.dark_mode_illustration_wrapper img,
 .image-wrapper img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     max-width: 100%;
     height: auto;
 }
 
-/* ===== PROJECTS PAGE STYLES ===== */
+/* ===== PROJECTS PAGE ===== */
 .projects-section {
-    padding: 2rem 1rem;
-    max-width: 1200px;
+    padding: 1.5rem 0.5rem;
+    max-width: 1400px !important;
     margin: 0 auto;
 }
 
 .projects-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
-    margin-top: 2rem;
-    padding: 0;
+    gap: 2rem;
 }
 
 .project-card {
@@ -81,6 +48,7 @@ body.colorscheme-dark .dark_mode_illustration {
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 500px;
 }
 
 body.colorscheme-dark .project-card {
@@ -89,7 +57,7 @@ body.colorscheme-dark .project-card {
 
 .project-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 .project-image-wrapper {
@@ -115,90 +83,91 @@ body.colorscheme-dark .project-image-wrapper {
 }
 
 .project-content {
-    padding: 1.5rem;
+    padding: 1.25rem;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    text-align: center;
+    align-items: center;
 }
 
 .project-title {
-    margin: 0 0 1rem 0;
-    font-size: 2.6rem !important;
+    margin: 0 0 0.75rem 0;
+    font-size: 2.2rem !important;
     font-weight: 600;
     color: var(--primary-text-color);
-    line-height: 1.4;
+    line-height: 1.3;
 }
 
 .project-description {
-    margin: 0 0 1.5rem 0;
-    font-size: 1.5rem !important;
+    margin: 0 0 0.75rem 0;
+    font-size: 1.3rem !important;
     color: var(--secondary-text-color);
     flex-grow: 1;
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
-/* ===== ADD THESE NEW STYLES HERE ===== */
-.project-icons {
+.project-icons-wrapper {
     display: flex;
+    justify-content: center;
     gap: 0.75rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem !important;
 }
 
 .project-icon-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
+    width: 44px !important;
+    height: 44px !important;
     border-radius: 50%;
-    background: var(--code-bg-color);
-    color: var(--secondary-text-color);
-    font-size: 1rem;
+    background: var(--code-bg-color) !important;
+    color: var(--secondary-text-color) !important;
+    font-size: 1.4rem !important;
     text-decoration: none;
     transition: all 0.2s ease;
 }
 
 .project-icon-link:hover {
-    background: var(--border-color);
-    color: var(--primary-text-color);
+    background: var(--border-color) !important;
+    color: var(--primary-text-color) !important;
     transform: translateY(-2px);
 }
 
 body.colorscheme-dark .project-icon-link {
-    background: #3a3a3a;
+    background: #3a3a3a !important;
 }
 
 .project-tech-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem !important;
+    justify-content: center;
 }
 
 .project-tech-tag {
-    padding: 0.25rem 0.75rem;
-    background: var(--code-bg-color);
+    padding: 0.3rem 0.9rem !important;
+    background: var(--code-bg-color) !important;
     border-radius: 12px;
-    font-size: 0.8rem;
-    color: var(--secondary-text-color);
+    font-size: 1rem !important;
+    color: var(--secondary-text-color) !important;
 }
 
 body.colorscheme-dark .project-tech-tag {
-    background: #3a3a3a;
+    background: #3a3a3a !important;
 }
 
 .project-tech-more {
-    padding: 0.25rem 0.6rem;
+    padding: 0.2rem 0.5rem;
     color: var(--secondary-text-color);
-    font-size: 0.8rem;
+    font-size: 0.85rem !important;
     font-style: italic;
 }
 
-/* ===== END OF NEW STYLES ===== */
-
 .project-button {
     display: inline-block;
-    padding: 0.9rem 2.2rem;
+    padding: 0.8rem 1.8rem;
     background-color: #333;
     color: #fff;
     text-decoration: none;
@@ -206,7 +175,7 @@ body.colorscheme-dark .project-tech-tag {
     transition: background-color 0.3s ease;
     text-align: center;
     font-weight: 500;
-    font-size: 1.05rem;
+    font-size: 1rem;
     margin-top: auto;
 }
 
@@ -222,95 +191,27 @@ body.colorscheme-dark .project-button:hover {
     background-color: #777;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .projects-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .projects-section {
-        padding: 2rem 1rem;
-    }
-
-    .projects-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        padding: 0;
-    }
-
-    .project-title {
-        font-size: 1.5rem;
-    }
-
-    .project-description {
-        font-size: 1rem;
-    }
-
-    /* Responsive adjustments for new styles */
-    .project-icons {
-        gap: 0.5rem;
-    }
-
-    .project-icon-link {
-        width: 28px;
-        height: 28px;
-        font-size: 0.9rem;
-    }
-
-    .project-tech-tag {
-        font-size: 0.75rem;
-        padding: 0.2rem 0.6rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .projects-section {
-        padding: 1.5rem 1rem;
-    }
-
-    .projects-container {
-        gap: 1.5rem;
-    }
-
-    .project-image-wrapper {
-        height: 200px;
-    }
-
-    .project-content {
-        padding: 1.25rem;
-    }
-
-    .project-title {
-        font-size: 1.3rem;
-    }
-
-    .project-description {
-        font-size: 0.95rem;
-    }
-}
-
-/* ===== PROJECT DETAIL PAGE STYLES ===== */
+/* ===== PROJECT SINGLE PAGE ===== */
 .project-single {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 1.5rem 0.5rem;
+    text-align: center;
 }
 
 .project-header {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .project-single-title {
-    font-size: 3.2rem !important;
-    margin-bottom: 1rem;
+    font-size: 2.8rem !important;
+    margin-bottom: 0.75rem;
     color: var(--primary-text-color);
 }
 
 .project-single-image {
     width: 100%;
-    margin: 1.5rem 0;
+    margin: 1.25rem 0;
     border-radius: 8px;
     overflow: hidden;
 }
@@ -322,101 +223,104 @@ body.colorscheme-dark .project-button:hover {
 }
 
 .project-single-content {
-    font-size: 2rem !important;
-    line-height: 1.8;
+    font-size: 1.8rem !important;
+    line-height: 1.7;
     color: var(--primary-text-color);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
 }
 
 .project-single-content h2 {
-    font-size: 2.4rem !important;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    color: var(--primary-text-color);
-}
-
-.project-single-content h3 {
-    font-size: 1.8rem !important;
+    font-size: 2.2rem !important;
     margin-top: 1.5rem;
     margin-bottom: 0.75rem;
     color: var(--primary-text-color);
 }
 
+.project-single-content h3 {
+    font-size: 1.6rem !important;
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-text-color);
+}
+
 .project-single-content p {
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 .project-single-content ul,
 .project-single-content ol {
-    margin-bottom: 1rem;
-    margin-left: 2rem;
+    margin-bottom: 0.75rem;
+    margin-left: 1.5rem;
 }
 
 .project-single-content li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
 }
 
-/* ===== ADD THESE NEW STYLES FOR SINGLE PAGE ===== */
 .project-links {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    margin: 2rem 0;
+    margin: 1.5rem 0 !important;
+    justify-content: center;
 }
 
 .project-link {
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
-    padding: 0.8rem 1.5rem;
-    background: var(--code-bg-color);
+    padding: 0.85rem 1.6rem !important;
+    background: var(--code-bg-color) !important;
     border-radius: 6px;
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--text-color) !important;
     transition: all 0.2s ease;
     border: 1px solid transparent;
+    font-size: 1.1rem !important;
 }
 
 .project-link:hover {
-    background: var(--border-color);
-    border-color: var(--primary-color);
+    background: var(--border-color) !important;
+    border-color: var(--primary-color) !important;
     transform: translateY(-2px);
 }
 
 body.colorscheme-dark .project-link {
-    background: #3a3a3a;
+    background: #3a3a3a !important;
 }
 
 .project-link i {
-    font-size: 1.1rem;
+    font-size: 1.5rem !important;
 }
 
 .github-link i {
-    color: #333;
+    color: #333 !important;
 }
 
 body.colorscheme-dark .github-link i {
-    color: #f0f0f0;
+    color: #f0f0f0 !important;
 }
 
 .demo-link i {
-    color: var(--primary-color);
+    color: var(--primary-color) !important;
 }
 
 .project-tech-stack {
-    margin: 2rem 0;
-    padding: 1.5rem;
-    background: var(--code-bg-color);
+    margin: 1.5rem 0 !important;
+    padding: 1.25rem;
+    background: var(--code-bg-color) !important;
     border-radius: 8px;
+    text-align: center;
 }
 
 body.colorscheme-dark .project-tech-stack {
-    background: #3a3a3a;
+    background: #3a3a3a !important;
 }
 
 .project-tech-stack h3 {
-    font-size: 1.6rem !important;
-    margin-bottom: 1rem;
+    font-size: 1.8rem !important;
+    margin-bottom: 0.75rem;
     color: var(--primary-text-color);
 }
 
@@ -424,42 +328,25 @@ body.colorscheme-dark .project-tech-stack {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+    justify-content: center;
 }
 
 .tech-tag {
-    padding: 0.35rem 1rem;
-    background: var(--card-background, #e0e0e0);
+    padding: 0.4rem 1.1rem !important;
+    background: var(--card-background, #e0e0e0) !important;
     border-radius: 20px;
-    font-size: 0.9rem;
-    color: var(--primary-text-color);
+    font-size: 1.1rem !important;
+    color: var(--primary-text-color) !important;
 }
 
 body.colorscheme-dark .tech-tag {
-    background: #2a2a2a;
+    background: #2a2a2a !important;
 }
-
-@media (max-width: 768px) {
-    .project-links {
-        flex-direction: column;
-    }
-
-    .project-link {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .tech-tag {
-        font-size: 0.85rem;
-        padding: 0.3rem 0.8rem;
-    }
-}
-
-/* ===== END OF NEW SINGLE PAGE STYLES ===== */
 
 .project-footer {
-    padding-top: 2rem;
+    padding-top: 1.5rem;
     border-top: 1px solid var(--secondary-text-color);
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .back-link {
@@ -475,4 +362,97 @@ body.colorscheme-dark .tech-tag {
 
 body.colorscheme-dark .back-link:hover {
     color: #aaa;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 810px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .project-card {
+        min-width: 100% !important;
+    }
+
+    .project-title {
+        font-size: 1.6rem !important;
+    }
+
+    .project-description {
+        font-size: 1.1rem !important;
+    }
+
+    .project-icon-link {
+        width: 38px !important;
+        height: 38px !important;
+        font-size: 1.2rem !important;
+    }
+
+    .project-tech-tag {
+        font-size: 0.9rem !important;
+        padding: 0.25rem 0.7rem !important;
+    }
+
+    .project-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-link {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+
+    .tech-tag {
+        font-size: 1rem !important;
+        padding: 0.35rem 0.9rem !important;
+    }
+
+    .project-single-title {
+        font-size: 2.2rem !important;
+    }
+
+    .project-single-content {
+        font-size: 1.5rem !important;
+    }
+
+    .project-single-content h2 {
+        font-size: 1.8rem !important;
+    }
+
+    .project-single-content h3 {
+        font-size: 1.4rem !important;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .projects-section,
+    .project-single {
+        padding: 1rem 0.5rem;
+    }
+
+    .project-image-wrapper {
+        height: 200px;
+    }
+
+    .project-content {
+        padding: 1rem;
+    }
+
+    .project-title {
+        font-size: 1.4rem !important;
+    }
+
+    .project-description {
+        font-size: 1rem !important;
+    }
+
+    .project-icon-link {
+        width: 34px !important;
+        height: 34px !important;
+        font-size: 1.1rem !important;
+    }
 }

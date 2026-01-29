@@ -23,11 +23,19 @@
                 <p class="project-description">{{ . }}</p>
                 {{ end }}
 
-                {{ with .Params.github_url }}
-                <a href="{{ . }}" class="project-icon-link" title="View on GitHub" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                {{ end }}
+                <div class="project-icons-wrapper">
+                    {{ with .Params.github_url }}
+                    <a href="{{ . }}" class="project-icon-link" title="View on GitHub" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    {{ end }}
+
+                    {{ with .Params.live_url }}
+                    <a href="{{ . }}" class="project-icon-link" title="Live Demo" aria-label="Live Demo">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    {{ end }}
+                </div>
 
                 {{ with .Params.tech_stack }}
                 <div class="project-tech-tags">
