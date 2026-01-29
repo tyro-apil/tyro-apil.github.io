@@ -1,0 +1,57 @@
+{{ $image1 := .Get "image1" }}
+{{ $alt1 := .Get "alt1" }}
+{{ $caption1 := .Get "caption1" }}
+{{ $image2 := .Get "image2" }}
+{{ $alt2 := .Get "alt2" }}
+{{ $caption2 := .Get "caption2" }}
+{{ $gap := .Get "gap" | default "1.5rem" }}
+
+<div class="image-pair-container" style="display: flex; gap: {{ $gap }}; justify-content: center; margin: 2rem 0;">
+    <div class="image-pair-column" style="flex: 1; text-align: center;">
+        <img src="{{ $image1 }}" alt="{{ $alt1 }}" style="width: 100%; height: auto; border-radius: 8px;" />
+        {{ with $caption1 }}
+        <div class="image-caption" style="margin-top: 0.75rem; font-style: italic; color: var(--secondary-text-color);">
+            {{ . }}
+        </div>
+        {{ end }}
+    </div>
+    <div class="image-pair-column" style="flex: 1; text-align: center;">
+        <img src="{{ $image2 }}" alt="{{ $alt2 }}" style="width: 100%; height: auto; border-radius: 8px;" />
+        {{ with $caption2 }}
+        <div class="image-caption" style="margin-top: 0.75rem; font-style: italic; color: var(--secondary-text-color);">
+            {{ . }}
+        </div>
+        {{ end }}
+    </div>
+</div>
+
+<style>
+    /* Very specific selectors to override theme CSS */
+    .image-pair-container .image-pair-column .image-caption,
+    div.image-pair-container div.image-pair-column div.image-caption {
+        font-size: 1.4rem !important;
+        line-height: 1.5 !important;
+        margin-top: 0.75rem !important;
+        font-style: italic !important;
+        color: var(--secondary-text-color) !important;
+    }
+
+    /* Target any p tags inside as well */
+    .image-pair-container .image-pair-column p.image-caption,
+    .image-pair-container .image-pair-column div.image-caption p {
+        font-size: 1.4rem !important;
+        line-height: 1.5 !important;
+    }
+
+    @media (max-width: 768px) {
+        .image-pair-container {
+            flex-direction: column !important;
+            gap: 1rem !important;
+        }
+
+        .image-pair-container .image-pair-column .image-caption,
+        div.image-pair-container div.image-pair-column div.image-caption {
+            font-size: 1.2rem !important;
+        }
+    }
+</style>
