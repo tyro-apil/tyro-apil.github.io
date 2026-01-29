@@ -1,0 +1,50 @@
+{{ define "title" }}
+{{ .Title }} · {{ .Site.Title }}
+{{ end }}
+
+{{ define "content" }}
+<article class="project-single">
+    <header class="project-header">
+        <h1 class="project-single-title">{{ .Title }}</h1>
+
+        {{ with .Params.image }}
+        <div class="project-single-image">
+            <img src="{{ . }}" alt="{{ $.Title }}" />
+        </div>
+        {{ end }}
+    </header>
+
+    <div class="project-single-content">
+        {{ .Content }}
+    </div>
+
+    <div class="project-links">
+        {{ with .Params.github_url }}
+        <a href="{{ . }}" class="project-link github-link" target="_blank" rel="noopener">
+            <i class="fab fa-github"></i> View Source
+        </a>
+        {{ end }}
+
+        {{ with .Params.live_url }}
+        <a href="{{ . }}" class="project-link demo-link" target="_blank" rel="noopener">
+            <i class="fas fa-external-link-alt"></i> Live Demo
+        </a>
+        {{ end }}
+    </div>
+
+    {{ with .Params.tech_stack }}
+    <div class="project-tech-stack">
+        <h3>Tech Stack</h3>
+        <div class="tech-tags">
+            {{ range . }}
+            <span class="tech-tag">{{ . }}</span>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+
+    <footer class="project-footer">
+        <a href="/projects/" class="back-link">← Back to Projects</a>
+    </footer>
+</article>
+{{ end }}

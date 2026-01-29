@@ -1,0 +1,47 @@
+{{ define "title" }}
+{{- i18n (lower .Title) | default .Title | title }} · {{ .Site.Title -}}
+{{ end }}
+
+{{ define "content" }}
+<section class="projects-section">
+    <div class="projects-container">
+        {{ $pages := where .Site.RegularPages "Type" "projects" }}
+        {{ $sorted := sort $pages "Params.weight" }}
+
+        {{ range $sorted }}
+        <article class="project-card">
+            {{ with .Params.image }}
+            <div class="project-image-wrapper">
+                <img src="{{ . }}" alt="{{ $.Title }}" class="project-image" />
+            </div>
+            {{ end }}
+
+            <div class="project-content">
+                <h2 class="project-title">{{ .Title }}</h2>
+
+                {{ with .Params.description }}
+                <p class="project-description">{{ . }}</p>
+                {{ end }}
+
+                {{ with .Params.github_url }}
+                <a href="{{ . }}" class="project-icon-link" title="View on GitHub" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                {{ end }}
+
+                {{ with .Params.tech_stack }}
+                <div class="project-tech-tags">
+                    {{ range first 3 . }}
+                    <span class="project-tech-tag">{{ . }}</span>
+                    {{ end }}
+                    {{ if gt (len .) 3 }}<span class="project-tech-more">+{{ sub (len .) 3 }}</span>{{ end }}
+                </div>
+                {{ end }}
+
+                <a href="{{ .RelPermalink }}" class="project-button">Learn More</a>
+            </div>
+        </article>
+        {{ end }}
+    </div>
+</section>
+{{ end }}
